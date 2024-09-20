@@ -1,0 +1,48 @@
+#include <stdio.h>
+ int main()
+ {
+    char operator;
+    float value1,value2,result;
+
+    printf("Select the operator(+,-,*,/): ");
+    scanf("%c",&operator);
+
+    printf("Enter the first value: ",value1);
+    scanf("%f",&value1);
+
+    printf("Enter the second value: ",value2);
+    scanf("%f",&value2);
+
+    switch(operator)
+    {
+        case'+':
+        result = value1 + value2;
+        break;
+
+        case'-':
+        result = value1 - value2;
+        break;
+
+        case'*':
+        result = value1 * value2;
+        break;
+
+        case'/':
+        if(value2 != 0){
+        result = value1 / value2;
+        }
+        else{
+            printf("Error! Zero can't be in denominator\n");
+        }
+        break;
+
+    }
+    printf("Result: %.2f %c %.2f = %.2f\n",value1,operator,value2,result);
+
+    return 0;
+    /*Made by : Novelpreet singh 
+                24BCA-4(B)
+                24BCA10180
+                */
+ }
+
